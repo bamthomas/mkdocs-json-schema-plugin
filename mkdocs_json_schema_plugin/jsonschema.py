@@ -6,7 +6,8 @@ class JsonSchema(plugins.BasePlugin):
 
     config_scheme = (
         ('json_schema', config.config_options.Type(str, default='')),
-        ('markdown_tag', config.config_options.Type(str, default=''))
+        ('markdown_tag', config.config_options.Type(str, default='')),
+        ('indent', config.config_options.Type(str, default=''))
     )
     generator = markdown_gen()
 

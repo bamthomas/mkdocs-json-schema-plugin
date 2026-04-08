@@ -127,4 +127,7 @@ class markdown_gen:
     def set_config(self, config):
         self.schema_file, _ = self.safe_get_value(config, "json_schema")
         self.tag, _ = self.safe_get_value(config, "markdown_tag")
+        indent, has_indent = self.safe_get_value(config, "indent")
+        if has_indent:
+            self.indent_val = indent
         print("Got config: File: {file} Tag: {tag}".format(file=self.schema_file, tag=self.tag))
